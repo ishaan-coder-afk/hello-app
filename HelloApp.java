@@ -2,15 +2,15 @@ public class HelloApp {
 
     public static void main(String[] args) {
 
-        // Check if user provided a name as command-line argument
+        // Default value
+        String name = "World";
+
+        // Check if a command-line argument is provided
         if (args.length > 0) {
-            String name = args[0];
-            System.out.println("Hello, " + name + "!");
-        }
-        else {
-            // Default message if no argument is given
-            System.out.println("Hello, World!");
+            name = args[0];
         }
 
+        // Display greeting
+        System.out.println("Hello, " + name + "!");
     }
 }
