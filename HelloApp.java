@@ -2,15 +2,21 @@ public class HelloApp {
 
     public static void main(String[] args) {
 
-        // Default value
-        String name = "World";
+        // Create a String array to store 7 lines of banner
+        String[] lines = new String[7];
 
-        // Check if a command-line argument is provided
-        if (args.length > 0) {
-            name = args[0];
+        // Populate banner lines (O O P S pattern)
+        lines[0] = String.join("   ", " *** ", " *** ", " ***** ", " ***** ");
+        lines[1] = String.join("   ", "*   *", "*   *", "*     ", "*     ");
+        lines[2] = String.join("   ", "*   *", "*   *", "*     ", "*     ");
+        lines[3] = String.join("   ", "*   *", "*   *", "***** ", "***** ");
+        lines[4] = String.join("   ", "*   *", "*   *", "*     ", "     *");
+        lines[5] = String.join("   ", "*   *", "*   *", "*     ", "     *");
+        lines[6] = String.join("   ", " *** ", " *** ", "*     ", "***** ");
+
+        // Print banner using for-each loop
+        for (String line : lines) {
+            System.out.println(line);
         }
-
-        // Display greeting
-        System.out.println("Hello, " + name + "!");
     }
 }
