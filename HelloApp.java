@@ -2,21 +2,20 @@ public class HelloApp {
 
     public static void main(String[] args) {
 
-        // Create a String array to store 7 lines of banner
-        String[] lines = new String[7];
+        String result;
 
-        // Populate banner lines (O O P S pattern)
-        lines[0] = String.join("   ", " *** ", " *** ", " ***** ", " ***** ");
-        lines[1] = String.join("   ", "*   *", "*   *", "*     ", "*     ");
-        lines[2] = String.join("   ", "*   *", "*   *", "*     ", "*     ");
-        lines[3] = String.join("   ", "*   *", "*   *", "***** ", "***** ");
-        lines[4] = String.join("   ", "*   *", "*   *", "*     ", "     *");
-        lines[5] = String.join("   ", "*   *", "*   *", "*     ", "     *");
-        lines[6] = String.join("   ", " *** ", " *** ", "*     ", "***** ");
+        // Check if arguments are provided
+        if (args.length > 0) {
 
-        // Print banner using for-each loop
-        for (String line : lines) {
-            System.out.println(line);
+            // Join all names with comma and space
+            result = String.join(", ", args);
+
+        } else {
+            // Default value
+            result = "World";
         }
+
+        // Print greeting
+        System.out.println("Hello, " + result + "!");
     }
 }
